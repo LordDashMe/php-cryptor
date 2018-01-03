@@ -1,0 +1,25 @@
+{
+    "name": "lorddashme/php-encryptor",
+    "description": "To hide your information.",
+    "version": "1.0.0",
+    "keywords": ["Hide", "Encrypt"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Clifford Reyes",
+            "email": "reyesjoshuaclifford@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LordDashMe\\Encryptor\\": "src/"
+        }
+    }
+}
