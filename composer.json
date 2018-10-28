@@ -1,6 +1,6 @@
 {
     "name": "lorddashme/php-cryptor",
-    "description": "A package wrapper for PHP cryptography functions.",
+    "description": "A PHP package wrapper for cryptography functions.",
     "keywords": [
         "cryptorgraphy", 
         "encrypt", 
