@@ -2,7 +2,6 @@
 
 namespace LordDashMe\Cryptor\Tests\Unit;
 
-use Mockery as Mockery;
 use PHPUnit\Framework\TestCase;
 use LordDashMe\Cryptor\Cryptor;
 
@@ -13,7 +12,7 @@ class EncryptorTest extends TestCase
      */
     public function it_should_load_cryptor_class()
     {
-        $this->assertInstanceOf(LordDashMe\Cryptor\Cryptor::class, new Cryptor());
+        $this->assertInstanceOf(Cryptor::class, new Cryptor());
     }
 
     /**
@@ -28,7 +27,7 @@ class EncryptorTest extends TestCase
         $cryptor->content('this is the plain text');
         $cryptor->encrypt();
         
-        $this->assertEquals('this is the plain text', $cryptor->get());
+        $this->assertTrue(! empty($cryptor->get()));
     }
 
     /**
