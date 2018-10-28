@@ -1,7 +1,9 @@
 <?php
 
-define('COMPOSER_TESTS_DIR', __DIR__.'/../vendor/autoload.php');
+$dir = __DIR__;
 
-require COMPOSER_TESTS_DIR;
+define('TESTS_DIR', "{$dir}/");
 
-define('ROOT_TESTS_DIR', __DIR__ . '/');
+define('COMPOSER_AUTOLOAD_FILE_PATH', "{$dir}/../vendor/autoload.php");
+
+require COMPOSER_AUTOLOAD_FILE_PATH;

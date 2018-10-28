@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    bootstrap="tests/bootstrap.php"
     backupGlobals="false"
     backupStaticAttributes="false"
     beStrictAboutTestsThatDoNotTestAnything="false"
-    bootstrap="tests/bootstrap.php"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
@@ -13,21 +15,24 @@
     stopOnFailure="false"
     syntaxCheck="true"
     verbose="true"
+    stderr="true"
 >
-    <logging>
-        <log type="coverage-html" target="build/coverage" title="coverage" charset="UTF-8" yui="true" highlight="true" lowUpperBound="35" highLowerBound="70"/>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-        <!-- <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/> -->
-    </logging>
-
+    <php>
+        <ini name="error_reporting" value="E_ALL" />
+    </php>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">src</directory>
         </whitelist>
     </filter>
     <testsuites>
-        <testsuite name="PHP Encryptor">
-            <directory suffix="Test.php">./tests</directory>
+        <testsuite name="php-cryptor">
+            <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
+    <logging>
+        <log type="coverage-html" target="build/logs/html/"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>
+    </logging>
 </phpunit>
