@@ -1,5 +1,5 @@
 {
-    "name": "lorddashme/php-encryptor",
+    "name": "lorddashme/php-cryptor",
     "description": "A package wrapper for PHP cryptography functions.",
     "keywords": [
         "cryptorgraphy", 
