@@ -10,6 +10,12 @@ A PHP package wrapper for cryptography functions.
 
 ## Install
 
+- It is advice to install the package via Composer. Use the command below to install the package:
+
+```txt
+composer require lorddashme/php-cryptor
+```
+
 ## Usage
 
 ## License
