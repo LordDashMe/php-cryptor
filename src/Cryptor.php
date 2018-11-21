@@ -58,10 +58,10 @@ class Cryptor
 
     public function encrypt()
     {
-        $ivLength = openssl_cipher_iv_length($this->method);
-        $iv = openssl_random_pseudo_bytes($ivLength);
+        $ivLength = \openssl_cipher_iv_length($this->method);
+        $iv = \openssl_random_pseudo_bytes($ivLength);
 
-        $cipherContent = openssl_encrypt(
+        $cipherContent = \openssl_encrypt(
             $this->content, $this->method, $this->key, $this->options, $iv
         );
 
@@ -69,14 +69,18 @@ class Cryptor
             'content' => $cipherContent, 'iv' => $iv
         );
 
-        $this->processedContent = base64_encode(serialize($data));
+        $this->processedContent = \base64_encode(
+            \serialize($data)
+        );
     }
 
     public function decrypt()
     {
-        $data = unserialize(base64_decode($this->content));
+        $data = \unserialize(
+            \base64_decode($this->content)
+        );
 
-        $this->processedContent = openssl_decrypt(
+        $this->processedContent = \openssl_decrypt(
             $data['content'], $this->method, $this->key, $this->options, $data['iv']
         );
     }
