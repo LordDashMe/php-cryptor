@@ -42,7 +42,7 @@ $cryptor->content('this is the plain text');
 $cryptor->encrypt();
 
 // Output the processed content.
-$cryptor->get(); // echo YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...
+$cryptor->get(); // echo "YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6..."
 ```
 
 - To decrypt encrypted content.
@@ -69,7 +69,7 @@ $cryptor->content('YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...');
 $cryptor->decrypt();
 
 // Output the processed content.
-$cryptor->get(); // echo this is the plain text
+$cryptor->get(); // echo "this is the plain text"
 ```
 
 ## License
