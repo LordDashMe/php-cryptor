@@ -38,7 +38,10 @@ $cryptor->key('password');
 $cryptor->content('this is the plain text');
 
 // Execute the encryption process base on the initialized method above.
-$cryptor->encrypt(); // echo YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...
+$cryptor->encrypt();
+
+// Output the processed content.
+$cryptor->get(); // echo YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...
 ```
 
 ## License
