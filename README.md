@@ -27,8 +27,7 @@ include __DIR__  . '/vendor/autoload.php';
 
 use LordDashMe\Cryptor\Cryptor;
 
-// Initialize the cryptor class and provide the cipher method
-// that will be using in the process later.
+// Initialize the cryptor class and provide the cipher method.
 $cryptor = new Cryptor(
     Cryptor::METHOD_ALIAS_AES256
 );
@@ -55,8 +54,7 @@ include __DIR__  . '/vendor/autoload.php';
 
 use LordDashMe\Cryptor\Cryptor;
 
-// Initialize the cryptor class and provide the cipher method
-// that will be using in the process later.
+// Initialize the cryptor class and provide the cipher method.
 $cryptor = new Cryptor(
     Cryptor::METHOD_ALIAS_AES256
 );
@@ -64,7 +62,7 @@ $cryptor = new Cryptor(
 // Provide the key that will be using to encrypt the given content.
 $cryptor->key('password');
 
-// The plain text that will be process to encrypt.
+// The encrypted content that will be process to decrypt.
 $cryptor->content('YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...');
 
 // Execute the decryption process.
