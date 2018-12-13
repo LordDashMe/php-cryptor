@@ -1,6 +1,6 @@
 # PHP Cryptor
 
-A PHP package wrapper for cryptography functions.
+A package wrapper for PHP cryptography functions.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/lorddashme/php-cryptor.svg?style=flat-square)](https://packagist.org/packages/lorddashme/php-cryptor) [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/) [![Build Status](https://img.shields.io/travis/LordDashMe/php-cryptor/master.svg?style=flat-square)](https://travis-ci.org/LordDashMe/php-cryptor) [![Coverage Status](https://img.shields.io/coveralls/LordDashMe/php-cryptor/master.svg?style=flat-square)](https://coveralls.io/github/LordDashMe/php-cryptor?branch=master)
 
@@ -18,6 +18,8 @@ composer require lorddashme/php-cryptor
 
 ## Usage
 
+### OpenSSL Class
+
 - To encrypt plain text.
 
 ```php
@@ -25,24 +27,25 @@ composer require lorddashme/php-cryptor
 
 include __DIR__  . '/vendor/autoload.php';
 
-use LordDashMe\Cryptor\Cryptor;
+use LordDashMe\Cryptor\OpenSSL\OpenSSL;
 
-// Initialize the cryptor class and provide the cipher method.
-$cryptor = new Cryptor(
-    Cryptor::METHOD_ALIAS_AES256
-);
+// Initialize the OpenSSL class.
+$openssl = new OpenSSL();
+
+// Provide the cipher method that will be using.
+$openssl->cipherMethod(OpenSSL::CIPHER_METHOD_AES256);
 
 // Provide the key that will be using to encrypt the given content.
-$cryptor->key('password');
+$openssl->key('password');
 
 // The plain text that will be process to encrypt.
-$cryptor->content('this is the plain text');
+$openssl->content('this is the plain text');
 
 // Execute the encryption process.
-$cryptor->encrypt();
+$openssl->encrypt();
 
 // Output the processed content.
-$cryptor->get(); // echo "YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6..."
+$openssl->get(); // echo "YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6..."
 ```
 
 - To decrypt encrypted content.
@@ -52,24 +55,25 @@ $cryptor->get(); // echo "YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6..."
 
 include __DIR__  . '/vendor/autoload.php';
 
-use LordDashMe\Cryptor\Cryptor;
+use LordDashMe\Cryptor\OpenSSL\OpenSSL;
 
-// Initialize the cryptor class and provide the cipher method.
-$cryptor = new Cryptor(
-    Cryptor::METHOD_ALIAS_AES256
-);
+// Initialize the OpenSSL class.
+$openssl = new OpenSSL();
+
+// Provide the cipher method that will be using.
+$openssl->cipherMethod(OpenSSL::CIPHER_METHOD_AES256);
 
 // Provide the key that will be using to encrypt the given content.
-$cryptor->key('password');
+$openssl->key('password');
 
 // The encrypted content that will be process to decrypt.
-$cryptor->content('YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...');
+$openssl->content('YToyOntzOjc6ImNvbnRlbnQiO3M6MzI6...');
 
 // Execute the decryption process.
-$cryptor->decrypt();
+$openssl->decrypt();
 
 // Output the processed content.
-$cryptor->get(); // echo "this is the plain text"
+$openssl->get(); // echo "this is the plain text"
 ```
 
 ## License
