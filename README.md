@@ -76,6 +76,84 @@ $openssl->decrypt();
 $openssl->get(); // echo "this is the plain text"
 ```
 
+### Password Hashing Class
+
+- To hash content.
+
+```php
+<?php
+
+include __DIR__  . '/vendor/autoload.php';
+
+use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
+
+// Initialize the Password Hashing class.
+$hashing = new PasswordHashing();
+
+// Provide the algorithm to be use for hashing.
+$hashing->algorithm(PasswordHashing::ALGO_PASSWORD_DEFAULT);
+
+// Execute the hashing process.
+$hashing->hash('Need to be hash');
+
+// Output the processed content.
+$hashing->get(); // echo "$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti"
+```
+
+- To re-hash content.
+
+```php
+<?php
+
+include __DIR__  . '/vendor/autoload.php';
+
+use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
+
+// Initialize the Password Hashing class.
+$hashing = new PasswordHashing();
+
+// Provide the algorithm to be use for hashing.
+$hashing->algorithm(PasswordHashing::ALGO_PASSWORD_DEFAULT);
+
+// Execute the re-hashing process.
+$hashing->rehash('Need to be hash', '$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti');
+
+// Output the processed content.
+$hashing->get(); // echo "$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf..."
+```
+
+- To get if of the hashed content.
+
+```php
+<?php
+
+include __DIR__  . '/vendor/autoload.php';
+
+use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
+
+// Initialize the Password Hashing class.
+$hashing = new PasswordHashing();
+
+// Execute the get info function.
+$hashing->getInfo('$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti'); // return array(...)
+```
+
+- To verify the hashed content.
+
+```php
+<?php
+
+include __DIR__  . '/vendor/autoload.php';
+
+use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
+
+// Initialize the Password Hashing class.
+$hashing = new PasswordHashing();
+
+// Execute the verify function.
+$hashing->verify('Need to be hash', '$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti'); // return boolean
+```
+
 ## License
 
 This package is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
