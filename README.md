@@ -91,7 +91,9 @@ use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
 $hashing = new PasswordHashing();
 
 // Provide the algorithm to be use for hashing.
-$hashing->algorithm(PasswordHashing::ALGO_PASSWORD_DEFAULT);
+$hashing->algorithm(
+  PasswordHashing::ALGO_PASSWORD_DEFAULT
+);
 
 // Execute the hashing process.
 $hashing->hash('Need to be hash');
@@ -113,7 +115,9 @@ use LordDashMe\Cryptor\PasswordHashing\PasswordHashing;
 $hashing = new PasswordHashing();
 
 // Provide the algorithm to be use for hashing.
-$hashing->algorithm(PasswordHashing::ALGO_PASSWORD_DEFAULT);
+$hashing->algorithm(
+  PasswordHashing::ALGO_PASSWORD_DEFAULT
+);
 
 // Execute the re-hashing process.
 $hashing->rehash('Need to be hash', '$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti');
