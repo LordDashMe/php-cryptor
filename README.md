@@ -33,7 +33,9 @@ use LordDashMe\Cryptor\OpenSSL\OpenSSL;
 $openssl = new OpenSSL();
 
 // Provide the cipher method that will be using.
-$openssl->cipherMethod(OpenSSL::CIPHER_METHOD_AES256);
+$openssl->cipherMethod(
+  OpenSSL::CIPHER_METHOD_AES256
+);
 
 // Provide the key that will be using to encrypt the given content.
 $openssl->key('password');
@@ -61,7 +63,9 @@ use LordDashMe\Cryptor\OpenSSL\OpenSSL;
 $openssl = new OpenSSL();
 
 // Provide the cipher method that will be using.
-$openssl->cipherMethod(OpenSSL::CIPHER_METHOD_AES256);
+$openssl->cipherMethod(
+  OpenSSL::CIPHER_METHOD_AES256
+);
 
 // Provide the key that will be using to encrypt the given content.
 $openssl->key('password');
