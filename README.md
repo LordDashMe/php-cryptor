@@ -82,7 +82,7 @@ $openssl->get(); // echo "this is the plain text"
 
 ### Password Hashing Class
 
-- To hash content.
+- To hash the content.
 
 ```php
 <?php
@@ -106,7 +106,7 @@ $hashing->hash('Need to be hash');
 $hashing->get(); // echo "$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5DPIyH1Up3HhhROcFti"
 ```
 
-- To re-hash content.
+- To re-hash the content.
 
 ```php
 <?php
@@ -130,7 +130,7 @@ $hashing->rehash('Need to be hash', '$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf46dASXh8r5D
 $hashing->get(); // echo "$2y$10$cwzwDA.wXJitJMPQt9ogDe5rf..."
 ```
 
-- To get if of the hashed content.
+- To get the info of the hashed content.
 
 ```php
 <?php
