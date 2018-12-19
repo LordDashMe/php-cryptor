@@ -22,6 +22,7 @@ composer require lorddashme/php-cryptor
 
 | Class | Description |
 | ----- | ----------- |
+| <img width=200/> | <img width=200/> |
 | [OpenSSL](#openssl-class) | Use this extension to encrypt or decrypt a content. |
 | [PasswordHashing](#password-hashing-class) | Use this extension to hash a password content. |
 
