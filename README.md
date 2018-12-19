@@ -18,7 +18,7 @@ composer require lorddashme/php-cryptor
 
 ## Usage
 
-### List of Wrapped Extension
+### List of Wrapped Class Extensions
 
 | Class | Description |
 | ----- | ----------- |
