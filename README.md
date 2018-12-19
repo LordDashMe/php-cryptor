@@ -25,9 +25,7 @@ composer require lorddashme/php-cryptor
 | [OpenSSL](#openssl-class) | Use this extension to encrypt or decrypt a content. |
 | [PasswordHashing](#password-hashing-class) | Use this extension to hash a password content. |
 
----
-
-### OpenSSL Class
+#### OpenSSL Class
 
 - To encrypt plain text.
 
@@ -89,7 +87,7 @@ $openssl->decrypt();
 $openssl->get(); // echo "this is the plain text"
 ```
 
-### Password Hashing Class
+#### Password Hashing Class
 
 - To hash the content.
 
