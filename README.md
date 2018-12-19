@@ -18,6 +18,13 @@ composer require lorddashme/php-cryptor
 
 ## Usage
 
+### List of Wrapped Extension
+
+| Class | Description |
+| ----- | ----------- |
+| [OpenSSL](#openssl-class) | Use this extension to encrypt or decrypt a content. |
+| [PasswordHashing](#password-hashing-class) | Use this extension to hash a password content. |
+
 ### OpenSSL Class
 
 - To encrypt plain text.
